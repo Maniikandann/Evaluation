@@ -27,7 +27,8 @@ public class Assignlift {
 		for (int i = 0; i < LIFTS; i++) {
 			int distance = Math.abs(currentFloor - liftPositions[i]);
 	
-			if (distance < minDistance && liftPositions[i] <= destinationFloor) {
+			if (distance < minDistance && (liftPositions[i] <= destinationFloor)
+					|| liftPositions[i] >= destinationFloor) {
 				minDistance = distance;
 				nearestLift = i;
 			}
